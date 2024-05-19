@@ -1,7 +1,10 @@
 <?php
-include("protect.php");
-?>
+require_once "functions.php";
+protect_acess();
 
+
+echo"logado";
+?>
 
 
 <!DOCTYPE html>
@@ -9,13 +12,11 @@ include("protect.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peinel</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
-    bem vindo ao painel <?php echo $_SESSION['nome']; ?>
-
-    <div>
-        <a href="logout.php">Sair</a>
-    </div>
+    <a href="cadastrar_onibus.php">Cadastrar Onibus</a>
+    <a href="logout.php">Logout</a>
 </body>
 </html>
